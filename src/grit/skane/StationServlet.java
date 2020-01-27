@@ -44,11 +44,13 @@ public class StationServlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-response.setContentType("text/html");
+		response.setContentType("text/html");
 		
 		PrintWriter out = response.getWriter();
 		
-		// Build the API call by adding x and y into a URL
+		out.print("<br>");
+		
+				// Build the API call by adding x and y into a URL
 				String x = "6167817", y = "1323658";
 						String NewURL = "http://www.labs.skanetrafiken.se/v2.2/neareststation.asp?x="
 								+ x + "&y=" + y + "&Radius=500";
@@ -114,7 +116,8 @@ response.setContentType("text/html");
 								  							.item(0).getTextContent());
 								out.println(" Distance: " + eElement.getElementsByTagName("Distance")
 															  .item(0).getTextContent());
-								  							
+
+						
 							}
 						}
 
