@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+	background-color: lightblue;
+}
+
+h1 {
+	color: red;
+	text-align: center;
+	display: block;
+	margin: 30 auto;
+}
+
+input {
+	color: black;
+	display: block;
+	witdh: 20%;
+	border-witdh: 1px;
+	paddin: 5px;
+	text-align: center;
+	margin: 0 auto;
+}
