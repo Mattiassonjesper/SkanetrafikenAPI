@@ -4,11 +4,11 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>into OpenWeather</title>
+<title>Station</title>
 </head>
 <body>
 
-
+<h1>Press go to view the nearest stations to Malmö C</h1>
    <form action="StationServlet" method="get">  
      
     

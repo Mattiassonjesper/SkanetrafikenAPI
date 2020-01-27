@@ -58,10 +58,10 @@ public class StationServlet extends HttpServlet {
 						System.out.println(NewURL);
 
 						// Set the URL that will be sent
-						URL fetchStationURL = new URL(NewURL);
+						URL StationURL = new URL(NewURL);
 
 						// Create a HTTP connection to sent the GET request over
-						HttpURLConnection linec = (HttpURLConnection) fetchStationURL.openConnection();
+						HttpURLConnection linec = (HttpURLConnection) StationURL.openConnection();
 						linec.setDoInput(true);
 						linec.setDoOutput(true);
 						linec.setRequestMethod("GET");
