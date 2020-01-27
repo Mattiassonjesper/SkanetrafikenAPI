@@ -11,7 +11,7 @@
 <h1>Press go to view the nearest stations to Malmö C</h1>
    <form action="StationServlet" method="get">  
      
-    
+    A
     <input type="submit" value="go"/>  
     </form>  
 
