@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="NewFile.css">
 <title>Station</title>
 </head>
 <body>
