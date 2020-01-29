@@ -53,8 +53,8 @@ public class StationServlet extends HttpServlet {
 		out.print("<br>");
 
 		// Build the API call by adding x and y into a URL
-		String x = "6167817", y = "1323658";
-		String NewURL = "http://www.labs.skanetrafiken.se/v2.2/neareststation.asp?x=" + x + "&y=" + y + "&Radius=500";
+		//String x = "6167817", y = "1323658";
+		String NewURL = "http://www.labs.skanetrafiken.se/v2.2/neareststation.asp?x=6167946&y=1323245&Radius=500";
 
 		System.out.println(NewURL);
 
