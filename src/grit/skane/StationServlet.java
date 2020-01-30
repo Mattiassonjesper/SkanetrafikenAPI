@@ -45,22 +45,21 @@ public class StationServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	//	response.getWriter().append("Served at: ").append(request.getContextPath());
-	//	String uName = request.getParameter("name");
-	
-		
+		// response.getWriter().append("Served at: ").append(request.getContextPath());
+		// String uName = request.getParameter("name");
+
 		ArrayList<String> listOfStation = new ArrayList();
 
-	//	response.setContentType("text/html");
+		// response.setContentType("text/html");
 
 		PrintWriter out = response.getWriter();
 
 		String stationName = request.getParameter("Station");
-		
-	//	out.print("<br>");
+
+		// out.print("<br>");
 
 		// Build the API call by
-		
+
 		String NewURL = "http://www.labs.skanetrafiken.se/v2.2/querystation.asp?inpPointFr=" + stationName;
 
 		System.out.println(NewURL);
@@ -103,8 +102,10 @@ public class StationServlet extends HttpServlet {
 
 		// Create a Node list that gets everything in and under the "clouds" tag
 		NodeList nList = doc.getElementsByTagName("Point");
+		NodeList sList = doc.getElementsByTagNameNS("StartPoints", "Point");
 
 		System.out.println(nList.getLength());
+		System.out.println(sList.getLength());
 		// loop through the content of the tag
 		for (int temp = 0; temp < nList.getLength(); temp++) {
 			// Save a node of the current list id
@@ -116,16 +117,19 @@ public class StationServlet extends HttpServlet {
 				Element eElement = (Element) node;
 				// get the content of an attribute in element
 				// and print it out to the client
-				
+
 				listOfStation.add(eElement.getElementsByTagName("Name").item(0).getTextContent());
-				
-			//	out.print("Nearest stop " + eElement.getElementsByTagName("Name").item(0).getTextContent());
-			//	out.print(" Id: " + eElement.getElementsByTagName("Id").item(0).getTextContent());
-			//	out.println(" Distance: " + eElement.getElementsByTagName("Distance").item(0).getTextContent() + " m");
+
+				// out.print("Nearest stop " +
+				// eElement.getElementsByTagName("Name").item(0).getTextContent());
+				// out.print(" Id: " +
+				// eElement.getElementsByTagName("Id").item(0).getTextContent());
+				// out.println(" Distance: " +
+				// eElement.getElementsByTagName("Distance").item(0).getTextContent() + " m");
 
 			}
 		}
-		
+
 		for (int temp = 0; temp < listOfStation.size(); temp++) {
 			out.println(listOfStation.get(temp));
 		}

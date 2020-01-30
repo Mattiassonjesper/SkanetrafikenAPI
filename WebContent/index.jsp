@@ -15,15 +15,13 @@
 
 
 	<h1>
-		Press go to view the nearest stations to <span>Malmö C</span>
+		Type a station to view all available destinations and hit <span>Go</span>
 	</h1>
 
 	<form action="StationServlet" method="get">
 
-		Pick a station:<input type="text" name="Station">
-		
-
-		<input type="submit" class="button" value="Go" />
+		Pick a station:<input type="text" name="Station"> <input
+			type="submit" class="button" value="Go" />
 
 
 	</form>
