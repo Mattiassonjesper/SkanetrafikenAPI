@@ -20,6 +20,9 @@
 
 	<form action="StationServlet" method="get">
 
+		Pick a station:<input type="text" name="Station">
+		
+
 		<input type="submit" class="button" value="Go" />
 
 
